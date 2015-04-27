@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="AJ Farkas Data Visualization" />
+	<meta property="og:description" content="AJ Farkas's portfolio of Data Visualization and Front-End Development" />
+	<meta property="og:url" content="http://www.ajfarkas.com/connections2014" />
+	<meta property="og:site_name" content="AJ Farkas Web Dev" />
+	<meta property="og:image" content="images/oglogo.png" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="user-scalable=no, width=device-width"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<title>Data Vis</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,200italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/vis0325.css">
+</head>
+<body>
+	<header>
+			<h1>Strength in Numbers -</h1>
+			<h2>2014 edition</h2>
+	</header>
+	<main>
+		<div id="d3"></div>
+		<ul id="d3-sort"></ul>
+		<div id="d3-key">
+			<p class="d3-category"></p>
+			<p class="d3-selection"></p>
+			<p class="stats d3-teams"></p>
+			<p class="stats d3-connects"></p>
+		</div>
+		<ul id="d3-legend"></ul>
+	</main>
+	<section id="d3-btns">
+		<h5>
+			The chord diagram illustrates the relationships between colleagues working on our shared organizational objectives.
+			Explore the networks by objective and by indvidual to see what collaboration looked like in 2014.
+		</h5>
+	</section>
+
+	<script src="http://d3js.org/d3.v3.min.js" ></script>
+	<script src="js/datavis.js"></script>
+	<script src="data/vis-0325.js"></script>
+	<script>var app = new App()</script>
+</body>
+</html>

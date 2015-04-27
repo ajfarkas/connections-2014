@@ -1,0 +1,255 @@
+/*RESETS --------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  position: relative;
+  min-width: calc(116vh + 307px);
+  height: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  font-family: open sans, "source sans pro", arial;
+  font-weight: 400;
+  font-size: 13px;
+  color: black;
+}
+@media only screen and (max-height: 700px) { 
+  body { 
+    width: calc(116vh + 307px);
+    min-width: 1052px; 
+  }
+}
+@media only screen and (max-height: 700px) and (min-width: 1052px) {
+  body { width: 100vw; }
+}
+ul {
+  list-style: none;
+}
+
+/*MODS --------------------------------------------------*/
+.hidden {
+  display: none;
+}
+.fade {
+  opacity: .2;
+  transition: opacity 1s linear;
+}
+.btn:hover,
+#d3-sort li:hover,
+.person:hover {
+  cursor: pointer;
+}
+
+/*POSITION --------------------------------------------------*/
+header { 
+  height: 36px;
+  padding: 5px 20px;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+}
+
+main,
+#d3-btns { 
+	float: left;
+  height: calc(100vh - 47px);
+  min-height: 650px;
+}
+
+/*TEXT --------------------------------------------------*/
+h1, h2 {
+  display: inline;
+  font-size: 24px;
+}
+h1 {
+  font-weight: 400;
+}
+h2 {
+  font-weight: 200;
+  font-style: italic;
+}
+h4 {
+  margin: 14px 0 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h4, h5 {
+  font-size: 13px;
+}
+h5 {
+  margin-bottom: 20px;
+  font-weight: 300;
+  letter-spacing: .3px;
+}
+
+text{ 
+  font-family: open sans, helvetica neue, helvetica;
+  font-size: .09rem;
+  letter-spacing: .005rem;
+  text-transform: uppercase;
+  fill: #323232;
+}
+
+/*DATA VIS --------------------------------------------------*/
+main { 
+  position: relative;
+  width: 116vh;
+  min-width: 745px;
+  background-color: #fafafa;
+}
+
+#d3 { 
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+svg { 
+  margin-top: 3%;
+  margin-left: 5%; 
+}
+
+.person path { transition: opacity .5s linear; }
+
+.chord { stroke-width: .1px; }
+.chord.d3-init { 
+  stroke-width: 0;
+  opacity: .3; 
+}
+
+/*BUTTONS --------------------------------------------------*/
+#d3-btns { 
+	position: absolute;
+	left: 116vh;
+  width: calc(100vw - 116vh);
+  min-width: 307px;
+	overflow-y: auto;
+  box-sizing: border-box;
+  padding: 25px 35px 10px;
+}
+@media only screen and (max-height: 700px) {
+  #d3-btns { width: calc(100vw - 745px); }
+}
+@media only screen and (max-height: 700px) and (min-width: 1052px) {
+  #d3-btns { 
+    width: calc(100vw - 116vh);
+    max-width: calc(100vw - 812px);
+  }
+}
+.btn {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 1px 3px;
+  font-weight: 400;
+  border: 1px solid;
+  border-radius: 6px;
+}
+.btn:hover:not(.clear), 
+.btn:focus:not(.clear) {
+  color: black;
+  background-color: #bfe5ec;
+}
+.clear {
+  width: 80px;
+  height: 23px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 1.8;
+}
+.clear:hover, 
+.clear:active {
+  background-color: #ccc;
+}
+
+.member {
+  background-color: #ffea2e;
+}
+
+.active-okr {
+  background-color: #72cedf;
+}
+
+/*SORT --------------------------------------------------*/
+#d3-sort {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+}
+#d3-sort li {
+  display: inline-block;
+  padding: 5px 10px 6px;
+  background-color: gray;
+  background-image: linear-gradient(
+    to bottom, #dedede, #7c7c7c
+  );
+  color: #2b2b2b;
+  font-weight: 400;
+}
+#d3-sort li.active-btn {
+  background-image: linear-gradient(
+    to top, #9b9b9b, #585858
+  );
+  color: white;
+}
+#d3-sort li:first-child {
+  border-radius: 5px 0 0 5px;
+}
+#d3-sort li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+/*I AM LEGEND --------------------------------------------------*/
+#d3-legend {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  letter-spacing: .5px;
+}
+#d3-legend li > * {
+  display: inline-block;
+}
+
+li .swatch {
+  width: 14px;
+  height: 5px;
+  position: relative;
+  bottom: 3px;
+  margin-right: 5px;
+}
+
+#d3-key {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.d3-category {
+  min-width: 150px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.d3-selection { 
+  min-width: 167px;
+  max-width: 35vh;
+  padding-bottom: 3px;
+  font-size: 16px;
+  font-weight: 300;
+}
+#d3-key .stats { 
+  font-size: 15px;
+  color: #1893a9;
+}
+
+

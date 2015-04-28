@@ -14,6 +14,6 @@ Click on a project button on the right of the page to see all of the people work
 The `Clear All` button resets all the chords to `visible`.
 
 ## Notes
-This was made with [d3.js](d3js.org). The SVG and page as a whole are responsive, but the page is made for large screens and not tablets or phones. This is mostly for efficiency (my client wasn't interested in displaying the visualization on small devices), but also due to the difficulty of being able to read this amount of data on a small screen. Likewise, it was more efficient to call the data from a `JSON` file than to write a script to access it from the server, both because it is only accessible internally and because the data does not get filtered.
+This was made with [d3.js](http://d3js.org). The SVG and page as a whole are responsive, but the page is made for large screens and not tablets or phones. This is mostly for efficiency (my client wasn't interested in displaying the visualization on small devices), but also due to the difficulty of being able to read this amount of data on a small screen. Likewise, it was more efficient to call the data from a `JSON` file than to write a script to access it from the server, both because it is only accessible internally and because the data does not get filtered.
 
-This page is live on my [portfolio site](ajfarkas.com/connections2014)
+This page is live on my [portfolio site](http://ajfarkas.com/connections2014)
